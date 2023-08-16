@@ -66,6 +66,8 @@ def start_game():
             #print(f"Hangmancount: {hangman_count}")
     if tries > 0:
         print("Splendid! You guessed the word and you win! Congratulations, you saved a man's life!")
+    elif tries == 0:
+        print("Game Over! The man has been hanged :(")
     else:
         print("Sorry you guessed the wrong letter. Try again!")
 
