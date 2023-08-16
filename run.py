@@ -1,6 +1,6 @@
 import random
 from wordlist import word_list
-
+from hangmanascii import hang_stages
 
 def choose_word():
     """
@@ -84,62 +84,6 @@ def start_game():
     else:
         print("Sorry you guessed the wrong letter. Try again!")
 
-
-
-
-# Hangman ASCII art source: https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c
-def display_hangman(tries):
-    phases = [   '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========''']
-    return phases[tries]
 
 def main():
     """
