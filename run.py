@@ -19,7 +19,7 @@ def init_game():
         #print("Let's play!")
         start_game()
     elif roundstart == "n":
-        print("What a pitty! Maybe you will change your mind and come to play soon.")
+        print("What a pitty! Maybe you will change your mind and come back soon to save a man from hanging.")
     else:
         #raise ValueError("Answer must be 'n' or 'y'")
         print("Answer must be 'n' or 'y'")
@@ -42,7 +42,9 @@ def start_game():
         output = ""
         for letter in word:
             if letter in correct_guesses:
-                output += letter 
+                output += letter
+            #elif letter = word:
+            #   print("You guessed the word right!")
             else:
                 output += "_ "
         if output == word:
@@ -65,9 +67,20 @@ def start_game():
             incorrect_guesses.append(guess)
             #print(f"Hangmancount: {hangman_count}")
     if tries > 0:
-        print("Splendid! You guessed the word and you win! Congratulations, you saved a man's life!")
+        print(f"Splendid! You guessed the right word {word} and saved the man from being hanged!")
+        nextround = input("Want to save some man's life again? y/n \n")
+        if nextround == "y":
+            start_game()
+        elif nextround == "n":
+            print("What a pitty! Maybe you will change your mind and come to play soon.")
+    
     elif tries == 0:
-        print("Game Over! The man has been hanged :(")
+        print(f"Game Over! The word was {word}")
+        nextround = input("Want to play again? y/n \n")
+        if nextround == "y":
+            start_game()
+        elif nextround == "n":
+            print("What a pitty! Maybe you will change your mind and come back to save more men from hanging.")
     else:
         print("Sorry you guessed the wrong letter. Try again!")
 
