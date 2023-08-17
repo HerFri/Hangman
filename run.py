@@ -36,7 +36,7 @@ def init_game():
 
 def start_game():
     """
-    Function for starting the actual game, including the previously defined funtions
+    Function for starting the actual game, when player agrees to play a game 
     """
     word = random.choice(word_list)
     tries = 6
