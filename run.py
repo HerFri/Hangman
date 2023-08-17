@@ -1,6 +1,6 @@
 import random
 from wordlist import word_list
-from hangmanascii import hang_stages #, stage_one, stage_two, stage_three, stage_four, stage_five, stage_six, stage_seven
+from hangmanascii import hang_stages
 from hangmanascii import hangmantitle
 from hangmanascii import youwin
 from hangmanascii import youlose
@@ -11,17 +11,14 @@ you_win = youwin
 you_lose = youlose
 
 
-def test():
-    print(hangman[0])
+#def choose_word():
+#    """
+#    Function that chooses a random word from the wordlist
+#    and returns it in uppercase for better readability
+#    """
+#   word = random.choice(word_list)
+#    return word.upper()
 
-
-def choose_word():
-    """
-    Function that chooses a random word from the wordlist
-    and returns it in uppercase for better readability
-    """
-    word = random.choice(word_list)
-    return word.upper()
 
 def init_game():
     """
@@ -49,7 +46,7 @@ def start_game():
     correct_guesses = []
     incorrect_guesses = []
 
-    hangman_counter = -1     #for future hangman display
+    hangman_counter = -1     
     
 
     while tries > 0:
@@ -117,12 +114,6 @@ def main():
     """
     Run all program functions
     """
-    choose_word()
 
-#main()
-
-#init_game()
-
-#init_game()
-
+    
 init_game()
