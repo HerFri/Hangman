@@ -62,7 +62,10 @@ def start_game():
         print(tries, " tries left")
 
         guess = input().lower()
-        
+        if not guess.isalpha():
+            print(f"{guess} is not a letter!")
+            continue
+
         if guess in correct_guesses or guess in incorrect_guesses:
             print("Already guessed", guess)
         elif guess in word:
