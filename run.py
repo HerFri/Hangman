@@ -1,9 +1,10 @@
 import random
 from wordlist import word_list
 from hangmanascii import hang_stages #, stage_one, stage_two, stage_three, stage_four, stage_five, stage_six, stage_seven
+from hangmanascii import hangmantitle
 
 hangman = hang_stages
-
+title = hangmantitle
 
 
 def test():
@@ -22,6 +23,7 @@ def init_game():
     """
     Function that initializes game when user accepts to play
     """
+    print(title)
     roundstart = input("Welcome to Hangman! Do you think you can rescue the poor man from hanging? y/n \n")
     if roundstart == "y":
         #print("Let's play!")
@@ -58,7 +60,7 @@ def start_game():
         if output == word:
             break 
 
-        print("Guess the word: ", output)
+        print("Guess a letter of the word: ", output)
         print(tries, " tries left")
 
         guess = input().lower()
