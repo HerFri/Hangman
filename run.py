@@ -1,6 +1,14 @@
 import random
 from wordlist import word_list
-from hangmanascii import hang_stages
+from hangmanascii import hang_stages #, stage_one, stage_two, stage_three, stage_four, stage_five, stage_six, stage_seven
+
+hangman = hang_stages
+
+
+
+def test():
+    print(hangman[0])
+
 
 def choose_word():
     """
@@ -35,7 +43,7 @@ def start_game():
     correct_guesses = []
     incorrect_guesses = []
 
-    #hangman_count = -1     #for future hangman display
+    hangman_counter = -1     #for future hangman display
     
 
     while tries > 0:
@@ -62,10 +70,10 @@ def start_game():
             correct_guesses.append(guess)
         else:
             print(f"Unfortunately, {guess} is not in the word. Try again!")
-            #hangman_count = hangman_count + 1
+            hangman_counter = hangman_counter + 1
             tries = tries - 1
             incorrect_guesses.append(guess)
-            #print(f"Hangmancount: {hangman_count}")
+            print(hangman[hangman_counter])
     if tries > 0:
         print(f"Splendid! You guessed the right word {word} and saved the man from being hanged!")
         nextround = input("Want to save some man's life again? y/n \n")
@@ -92,6 +100,8 @@ def main():
     choose_word()
 
 #main()
+
+#init_game()
 
 #init_game()
 
