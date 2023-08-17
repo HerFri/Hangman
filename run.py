@@ -2,9 +2,13 @@ import random
 from wordlist import word_list
 from hangmanascii import hang_stages #, stage_one, stage_two, stage_three, stage_four, stage_five, stage_six, stage_seven
 from hangmanascii import hangmantitle
+from hangmanascii import youwin
+from hangmanascii import youlose
 
 hangman = hang_stages
 title = hangmantitle
+you_win = youwin
+you_lose = youlose
 
 
 def test():
@@ -80,6 +84,7 @@ def start_game():
             incorrect_guesses.append(guess)
             print(hangman[hangman_counter])
     if tries > 0:
+        print(you_win)
         print(f"Splendid! You guessed the right word {word} and saved the man from being hanged!")
         nextround = input("Want to save some man's life again? y/n \n")
         if nextround == "y":
@@ -88,6 +93,7 @@ def start_game():
             print("What a pitty! Maybe you will change your mind and come to play soon.")
     
     elif tries == 0:
+        print(you_lose)
         print(f"Game Over! The word was {word}")
         nextround = input("Want to play again? y/n \n")
         if nextround == "y":
