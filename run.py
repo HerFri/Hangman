@@ -74,9 +74,18 @@ def start_game():
 
         if guess in correct_guesses or guess in incorrect_guesses:
             print("Already guessed", guess)
+        elif guess == word:
+            print(you_win)
+            print(f"Splendid! You guessed the right word {word} and saved the man from being hanged!")
+            nextround = input("Want to save some man's life again? y/n \n")
+            if nextround == "y":
+                start_game()
+            elif nextround == "n":
+                print("What a pitty! Maybe you will change your mind and come to play soon.")
         elif guess in word:
             print(f"Good job, the letter {guess} is in the word!")
             correct_guesses.append(guess)
+       
         else:
             print(f"Unfortunately, {guess} is not in the word. Try again!")
             hangman_counter = hangman_counter + 1
