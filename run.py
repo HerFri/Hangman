@@ -20,12 +20,12 @@ def init_game():
     Function that initializes game when user accepts to play
     """
     print(title)
-    roundstart = input("Welcome to Hangman! Do you think you can rescue the poor man from hanging? Y/N (Press R to read the rules) \n").lower()
-    if roundstart == "r":
+    round_start = input("Welcome to Hangman! Do you think you can rescue the poor man from hanging? Y/N (Press R to read the rules) \n").lower()
+    if round_start == "r":
         show_rules()
-    elif roundstart == "y":
+    elif round_start == "y":
         start_game()
-    elif roundstart == "n":
+    elif round_start == "n":
         print("What a pitty! Maybe you will change your mind and come back soon to save a man from hanging.")
     else:
         print("Answer must be 'n' or 'y'")
@@ -58,10 +58,10 @@ def win_round(word):
     """
     print(you_win)
     print(f"Splendid! You guessed the right word {word} and saved the man from being hanged!")
-    nextround = input("Want to save some man's life again? y/n \n")
-    if nextround == "y":
+    win_next_round = input("Want to save some man's life again? y/n \n")
+    if win_next_round == "y":
         start_game()
-    elif nextround == "n":
+    elif win_next_round == "n":
         print("What a pitty! Maybe you will change your mind and come to play soon.")
 
 
@@ -71,10 +71,10 @@ def lose_round(word):
     """
     print(you_lose)
     print(f"Game Over! The word was {word}")
-    nextround = input("Want to play again? y/n \n")
-    if nextround == "y":
+    lose_next_round = input("Want to play again? y/n \n")
+    if lose_next_round == "y":
         start_game()
-    elif nextround == "n":
+    elif lose_next_round == "n":
         print("What a pitty! Maybe you will change your mind and come back to save more men from hanging.")
 
 
