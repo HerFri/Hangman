@@ -74,3 +74,12 @@ YOULOSE = """
     |_|\___/ \__,_| |_|\___/|___/\___| (_)
                                           
                                           """
+
+RULES = """
+"You have 6 tries to guess the right word.            +---+
+Every _ indicates one letter of the word you          |   |
+are guessing. For every wrong guess a part of         O   |
+the man to be hanged will be added. If you achieve   /|\  |
+to guess the right word within 6 tries,              / \  |
+you can save the man of being hanged, otherwise           |
+you will lose and the man is hanged.                ========="""

@@ -4,19 +4,31 @@ from hangmanascii import HANG_STAGES
 from hangmanascii import HANGMANTITLE
 from hangmanascii import YOUWIN
 from hangmanascii import YOULOSE
+from hangmanascii import RULES
+
 
 hangman = HANG_STAGES
 title = HANGMANTITLE
 you_win = YOUWIN
 you_lose = YOULOSE
 
+NOT_VALID_LETTERS = ["ä", "ö", "ü", "ß"]
+
+def check_input():
+    """
+    Checks if the player's input is valid
+    """
+    
+
 def init_game():
     """
     Function that initializes game when user accepts to play
     """
     print(title)
-    roundstart = input("Welcome to Hangman! Do you think you can rescue the poor man from hanging? y/n \n").lower()
-    if roundstart == "y":
+    roundstart = input("Welcome to Hangman! Do you think you can rescue the poor man from hanging? Y/N (Press R to read the rules) \n").lower()
+    if roundstart == "r":
+        print(RULES)
+    elif roundstart == "y":
         start_game()
     elif roundstart == "n":
         print("What a pitty! Maybe you will change your mind and come back soon to save a man from hanging.")
@@ -26,6 +38,9 @@ def init_game():
 
 
 def win_round(word):
+    """
+    Function that is executed when player guessed the right word
+    """
     print(you_win)
     print(f"Splendid! You guessed the right word {word} and saved the man from being hanged!")
     nextround = input("Want to save some man's life again? y/n \n")
@@ -36,6 +51,9 @@ def win_round(word):
 
 
 def lose_round(word):
+    """
+    Function that is executed when player did not guess the right word
+    """
     print(you_lose)
     print(f"Game Over! The word was {word}")
     nextround = input("Want to play again? y/n \n")
@@ -75,6 +93,9 @@ def start_game():
         guess = input().lower()
         if not guess.isalpha():
             print(f"{guess} is not a letter!")
+            continue
+        elif guess in NOT_VALID_LETTERS:
+            print(f"{guess} is not a valid letter!")
             continue
         #elif guess == word:
         elif len(guess) > 1:
