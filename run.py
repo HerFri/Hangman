@@ -14,12 +14,7 @@ you_lose = YOULOSE
 
 NOT_VALID_LETTERS = ["ä", "ö", "ü", "ß"]
 
-def check_input():
-    """
-    Checks if the player's input is valid
-    """
-    
-
+       
 def init_game():
     """
     Function that initializes game when user accepts to play
@@ -27,7 +22,7 @@ def init_game():
     print(title)
     roundstart = input("Welcome to Hangman! Do you think you can rescue the poor man from hanging? Y/N (Press R to read the rules) \n").lower()
     if roundstart == "r":
-        print(RULES)
+        show_rules()
     elif roundstart == "y":
         start_game()
     elif roundstart == "n":
@@ -35,6 +30,26 @@ def init_game():
     else:
         print("Answer must be 'n' or 'y'")
         init_game()
+
+def show_rules():
+    """
+    Function that displays the rules of the game to the player
+    """
+    print(RULES)
+    ready_to_play()
+
+def ready_to_play():
+    """
+    Function that asks if the player is ready to play
+    """
+    ask_to_play = input("Ready to play? Y/N \n").lower()
+    if ask_to_play == "y":
+        start_game()
+    elif ask_to_play == "n":
+        print("What a pitty! Maybe you will change your mind and come back soon to save a man from hanging.")
+    else:
+        print(f"{ask_to_play} is not a valid answer.")
+        ready_to_play()
 
 
 def win_round(word):
