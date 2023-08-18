@@ -28,7 +28,7 @@ def init_game():
     elif round_start == "n":
         print("What a pitty! Maybe you will change your mind and come back soon to save a man from hanging.")
     else:
-        print("Answer must be 'n','y' or 'r'")
+        print("Answer must be 'Y','N' or 'R'")
         init_game()
 
 def show_rules():
