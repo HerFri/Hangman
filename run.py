@@ -145,12 +145,6 @@ def start_game():
         print("Sorry you guessed the wrong letter. Try again!")
 
 
-def main():
-    """
-    Run all program functions
-    """
-
-    
 if __name__ == "__main__":
     init_game()
 # DocString description needed?
