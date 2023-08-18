@@ -41,7 +41,7 @@ def start_game():
     """
     Function for starting the actual game, when player agrees to play a game 
     """
-    word = random.choice(word_list)
+    word = get_word()
     tries = 6
     correct_guesses = []
     incorrect_guesses = []
@@ -67,6 +67,17 @@ def start_game():
         guess = input().lower()
         if not guess.isalpha():
             print(f"{guess} is not a letter!")
+            continue
+        #elif guess == word:
+            print(you_win)
+            print(f"Splendid! You guessed the right word {word} and saved the man from being hanged!")
+            nextround = input("Want to save some man's life again? y/n \n")
+            if nextround == "y":
+                start_game()
+            elif nextround == "n":
+                print("What a pitty! Maybe you will change your mind and come to play soon.")
+        #elif len(guess) > 1:
+            print("Pick only one letter!")
             continue
 
         if guess in correct_guesses or guess in incorrect_guesses:
