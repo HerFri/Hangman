@@ -52,17 +52,27 @@ def ready_to_play():
         ready_to_play()
 
 
+def play_again():
+    """
+    Function that asks the player if another game wants to be played
+    """
+    next_round = input("Want to play again? Y/N \n")
+    if next_round == "y":
+        start_game()
+    elif next_round == "n":
+        print("What a pitty! Maybe you will change your mind and come to play soon.")
+    else:
+        print(f"{next_round} is not a valid answer")
+        play_again()
+
+
 def win_round(word):
     """
     Function that is executed when player guessed the right word
     """
     print(you_win)
     print(f"Splendid! You guessed the right word {word} and saved the man from being hanged!")
-    win_next_round = input("Want to save some man's life again? y/n \n")
-    if win_next_round == "y":
-        start_game()
-    elif win_next_round == "n":
-        print("What a pitty! Maybe you will change your mind and come to play soon.")
+    play_again()
 
 
 def lose_round(word):
@@ -71,11 +81,7 @@ def lose_round(word):
     """
     print(you_lose)
     print(f"Game Over! The word was {word}")
-    lose_next_round = input("Want to play again? y/n \n")
-    if lose_next_round == "y":
-        start_game()
-    elif lose_next_round == "n":
-        print("What a pitty! Maybe you will change your mind and come back to save more men from hanging.")
+    play_again()
 
 
 def start_game():
@@ -112,7 +118,6 @@ def start_game():
         elif guess in NOT_VALID_LETTERS:
             print(f"{guess} is not a valid letter!")
             continue
-        #elif guess == word:
         elif len(guess) > 1:
             print("Pick only one letter!")
             continue
