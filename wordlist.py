@@ -1,4 +1,6 @@
-word_list = [
+import random
+
+__WORD_LIST__ = [
     "abruptly",
     "absurd",
     "abyss",
@@ -213,3 +215,6 @@ word_list = [
     "zodiac",
     "zombie",
 ]
+
+def get_word():
+    return random.choice(__WORD_LIST__)

@@ -1,14 +1,14 @@
 import random
-from wordlist import word_list
-from hangmanascii import hang_stages
-from hangmanascii import hangmantitle
-from hangmanascii import youwin
-from hangmanascii import youlose
+from wordlist import get_word
+from hangmanascii import HANG_STAGES
+from hangmanascii import HANGMANTITLE
+from hangmanascii import YOUWIN
+from hangmanascii import YOULOSE
 
-hangman = hang_stages
-title = hangmantitle
-you_win = youwin
-you_lose = youlose
+hangman = HANG_STAGES
+title = HANGMANTITLE
+you_win = YOUWIN
+you_lose = YOULOSE
 
 
 #def choose_word():

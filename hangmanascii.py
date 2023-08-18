@@ -1,6 +1,6 @@
 # Hangman ASCII art source: https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c
 
-hang_stages = [
+HANG_STAGES = [
 """
   +---+
   |   |
@@ -45,7 +45,7 @@ hang_stages = [
       |
 ========="""]
 
-hangmantitle = """ 
+HANGMANTITLE = """ 
  _                                             
 | |                                                +---+    
 | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __      |   |
@@ -55,7 +55,7 @@ hangmantitle = """
                     __/ |                              |
                    |___/                         ========="""       
 
-youwin = """
+YOUWIN = """
  __     __                    _         _ 
  \ \   / /                   (_)       | |
   \ \_/ /__  _   _  __      ___ _ __   | |
@@ -65,7 +65,7 @@ youwin = """
                                           
                                           """
 
-youlose = """
+YOULOSE = """
  __     __           _                  _ 
  \ \   / /          | |                | |
   \ \_/ /__  _   _  | | ___  ___  ___  | |
