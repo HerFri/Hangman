@@ -133,8 +133,8 @@ def start_game():
             guessed_letters.append(guess)
         else:
             print(f"Unfortunately, {guess} is not in the word. Try again!")
-            hangman_counter = hangman_counter + 1
-            tries = tries - 1
+            hangman_counter += 1
+            tries -= 1
             incorrect_guesses.append(guess)
             guessed_letters.append(guess)
             print(hangman[hangman_counter])
