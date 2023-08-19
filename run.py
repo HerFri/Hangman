@@ -131,6 +131,7 @@ def start_game():
             print(f"Good job, the letter {guess} is in the word!")
             correct_guesses.append(guess)
             guessed_letters.append(guess)
+            print(hangman[hangman_counter])
         else:
             print(f"Unfortunately, {guess} is not in the word. Try again!")
             hangman_counter += 1
