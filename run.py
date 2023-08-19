@@ -106,7 +106,7 @@ def start_game():
             else:
                 output += " _ "
         if output == word:
-            break 
+            win_round(word) 
         print("\n")
         print("Guess a letter of the word: ", output)
         
@@ -142,8 +142,6 @@ def start_game():
         win_round(word)
     elif tries == 0:
         lose_round(word)  
-    else:
-        print("Sorry you guessed the wrong letter. Try again!")
 
 
 if __name__ == "__main__":
