@@ -107,7 +107,7 @@ def start_game():
                 output += " _ "
         if output == word:
             break 
-
+        print("\n")
         print("Guess a letter of the word: ", output)
         
         print("Already guessed letters:", *sorted(guessed_letters), sep = " ")
