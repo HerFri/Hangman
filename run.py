@@ -127,14 +127,10 @@ def start_game():
 
         if guess in correct_guesses or guess in incorrect_guesses:
             print("Already guessed", guess)
-        elif guess == word:
-            win_round(word)
-
         elif guess in word:
             print(f"Good job, the letter {guess} is in the word!")
             correct_guesses.append(guess)
             guessed_letters.append(guess)
-       
         else:
             print(f"Unfortunately, {guess} is not in the word. Try again!")
             hangman_counter = hangman_counter + 1
