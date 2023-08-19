@@ -110,18 +110,10 @@ def start_game():
 
         print("Guess a letter of the word: ", output)
         
-        print("Already guessed letters:", *guessed_letters, sep = " ")
-        # for letter in guessed_letters:
-        #    print("Already guessed letters:\n", letter, end=" ")
-        
-        
-        
+        print("Already guessed letters:", *sorted(guessed_letters), sep = " ")
         
         print(tries, " tries left")
         
-
-        
-
         guess = input().lower()
         if not guess.isalpha():
             print(f"{guess} is not a letter!")
