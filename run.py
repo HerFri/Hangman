@@ -104,7 +104,7 @@ def start_game():
             if letter in correct_guesses:
                 output += letter
             else:
-                output += "_ "
+                output += " _ "
         if output == word:
             break 
 
