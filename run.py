@@ -94,7 +94,7 @@ def start_game():
     
     correct_guesses = []
     incorrect_guesses = []
-
+    guessed_letters = []
     hangman_counter = -1     
     
 
@@ -109,7 +109,18 @@ def start_game():
             break 
 
         print("Guess a letter of the word: ", output)
+        
+        print("Already guessed letters:", *guessed_letters, sep = " ")
+        # for letter in guessed_letters:
+        #    print("Already guessed letters:\n", letter, end=" ")
+        
+        
+        
+        
         print(tries, " tries left")
+        
+
+        
 
         guess = input().lower()
         if not guess.isalpha():
@@ -130,12 +141,14 @@ def start_game():
         elif guess in word:
             print(f"Good job, the letter {guess} is in the word!")
             correct_guesses.append(guess)
+            guessed_letters.append(guess)
        
         else:
             print(f"Unfortunately, {guess} is not in the word. Try again!")
             hangman_counter = hangman_counter + 1
             tries = tries - 1
             incorrect_guesses.append(guess)
+            guessed_letters.append(guess)
             print(hangman[hangman_counter])
     if tries > 0:
         win_round(word)
