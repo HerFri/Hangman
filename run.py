@@ -21,7 +21,7 @@ def init_game():
     """
     print(title)
     round_start = input("Welcome to Hangman! Do you think you can "
-                        "rescue the poor man from being hanged? Y/N \n"
+                        "rescue the poor man from being hanged? Y/N "
                         "(Press R to read the rules) \n").lower()
     if round_start == "r":
         show_rules()
