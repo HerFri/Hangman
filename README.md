@@ -21,22 +21,22 @@ For a comprehensible visualization of the application structure I made this flow
 # Terminal Landing Page
 ![landingpage](https://github.com/HerFri/hangman/blob/main/readmeimages/landingpage.PNG?raw=true)
 
-By visiting the Heroko website that was used to deploy the application, the first thing that is displayed to the user is the terminal landing page. By entering the side, the application is initialized and waits for the input of the user. On the very top is the ´RUN PROGRAM´ button that allows to restart the application at any time. On the top of the terminal the running startup command is displayed that runs the code of the application. Under the ASCII art that displays the title  'Hangman' and a stick figure hanging on a rope, the user finds a text that greets visiting users and asks, if the game wants to be played, which can be answered by typing in ´Y´ for Yes and ´N´ for No. The input here is not case-sensitive. Moreover, if users do not know the rules of the game, the text suggests to type in ´R´ to display the rules of the game. By typing in different letters or characters other than ´Y´, ´N´ or ´Y´ , like ´F´, and pressing the enter key, a message will be displayed that points out that an invalid answer has been typed in, followed by the display of the same display of ASCII art and text like in the beginning when starting the application, which gives once again opportunity to the user to provide a valid input:
+By visiting the Heroko website that was used to deploy the application, the first thing that is displayed to the user is the terminal landing page. By entering the side, the application is initialized and waits for the input of the user. On the very top is the `RUN PROGRAM` button that allows to restart the application at any time. On the top of the terminal the running startup command is displayed that runs the code of the application. Under the ASCII art that displays the title  'Hangman' and a stick figure hanging on a rope, the user finds a text that greets visiting users and asks, if the game wants to be played, which can be answered by typing in `Y` for Yes and `N` for No. The input here is not case-sensitive. Moreover, if users do not know the rules of the game, the text suggests to type in `R` to display the rules of the game. By typing in different letters or characters other than `Y`, `N` or `Y` , like `F`, and pressing the enter key, a message will be displayed that points out that an invalid answer has been typed in, followed by the display of the same display of ASCII art and text like in the beginning when starting the application, which gives once again opportunity to the user to provide a valid input:
 
 ![wronganswer](https://github.com/HerFri/hangman/blob/main/readmeimages/wronganswer.PNG?raw=true)
 
 # Game Rules
 ![rules](https://github.com/HerFri/hangman/blob/main/readmeimages/rules.PNG?raw=true)
 
-By giving the input of ´R´, the rules of the game are presented to the user. At the end, the user is asked, if he or she is ready to play, which can be answered by the input of ´Y´ for Yes and ´N´ for No. Once again, if invalid input is provided, the user will be shown an error message, followed by the same question asking if the user is ready to play:
+By giving the input of `R`, the rules of the game are presented to the user. At the end, the user is asked, if he or she is ready to play, which can be answered by the input of `Y` for Yes and `N` for No. Once again, if invalid input is provided, the user will be shown an error message, followed by the same question asking if the user is ready to play:
 
 ![notvalidanswer](https://github.com/HerFri/hangman/blob/main/readmeimages/notvalidanswer.PNG?raw=true)
 
-By giving the input of ´N´ for No, a message is displayed that the execution of the program ends and that the application can be restarted by pressing the ´RUN PROGRAM´ button above: 
+By giving the input of `N` for No, a message is displayed that the execution of the program ends and that the application can be restarted by pressing the `RUN PROGRAM` button above: 
 
 ![answerno](https://github.com/HerFri/hangman/blob/main/readmeimages/answerno.PNG?raw=true)
 
-By giving the input of ´Y´ for Yes, the game is started and the player can start guessing a letter.
+By giving the input of `Y` for Yes, the game is started and the player can start guessing a letter.
 
 # Playing the Game
 
