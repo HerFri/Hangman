@@ -90,7 +90,7 @@ def win_round(word):
 
 
 def lose_round(word):
-    """F
+    """
     Function that is executed when player did not guess the right word
     """
     print(you_lose)
