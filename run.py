@@ -114,7 +114,7 @@ def start_game():
                 word_completed += letter
                 print(letter, end=" ")
             else:
-                print(" _", end=" ")
+                print("_", end=" ")
 
         if word_completed == word:
             win_round(word)
