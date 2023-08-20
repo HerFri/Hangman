@@ -20,16 +20,16 @@ def init_game():
     Function that initializes game when user accepts to play
     """
     print(title)
-    round_start = input("Welcome to Hangman! Do you think you can \
-                        rescue the poor man from hanging? Y/N \n\
-                        (Press R to read the rules) \n").lower()
+    round_start = input("Welcome to Hangman! Do you think you can "
+                        "rescue the poor man from hanging? Y/N \n"
+                        "(Press R to read the rules) \n").lower()
     if round_start == "r":
         show_rules()
     elif round_start == "y":
         start_game()
     elif round_start == "n":
-        print("What a pitty! Maybe you will change your mind \
-              and come back soon to save a man from hanging.")
+        print("What a pitty! Maybe you will change your mind "
+              "and come back soon to save a man from hanging.")
     else:
         print("Answer must be 'Y','N' or 'R'")
         init_game()
@@ -51,8 +51,8 @@ def ready_to_play():
     if ask_to_play == "y":
         start_game()
     elif ask_to_play == "n":
-        print("What a pitty! Maybe you will change your mind \
-              and come back soon to save a man from hanging.")
+        print("What a pitty! Maybe you will change your mind "
+              "and come back soon to save a man from hanging.")
     else:
         print(f"{ask_to_play} is not a valid answer.")
         ready_to_play()
@@ -68,8 +68,8 @@ def play_again():
         print("\n")
         start_game()
     elif next_round == "n":
-        print("What a pitty! Maybe you will change your mind \
-              and come back soon to play again.")
+        print("What a pitty! Maybe you will change your mind "
+              "and come back soon to play again.")
     else:
         print(f"{next_round} is not a valid answer")
         play_again()
@@ -80,13 +80,13 @@ def win_round(word):
     Function that is executed when player guessed the right word
     """
     print(you_win)
-    print(f"Splendid! You guessed the right word {word} and saved \
-          the man from being hanged!")
+    print(f"Splendid! You guessed the right word {word} and saved "
+          "the man \nfrom being hanged!")
     play_again()
 
 
 def lose_round(word):
-    """
+    """F
     Function that is executed when player did not guess the right word
     """
     print(you_lose)
