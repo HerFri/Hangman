@@ -20,7 +20,7 @@ def init_game():
     Function that initializes game when user accepts to play
     """
     print(title)
-    round_start = input("Welcome to Hangman! Do you think you can rescue the poor man from hanging? Y/N (Press R to read the rules) \n").lower()
+    round_start = input("Welcome to Hangman! Do you think you can rescue the poor man from hanging? Y/N \n(Press R to read the rules) \n").lower()
     if round_start == "r":
         show_rules()
     elif round_start == "y":
