@@ -21,7 +21,7 @@ def init_game():
     """
     print(title)
     round_start = input("Welcome to Hangman! Do you think you can "
-                        "rescue the poor man from hanging? Y/N \n"
+                        "rescue the poor man from being hanged? Y/N \n"
                         "(Press R to read the rules) \n").lower()
     if round_start == "r":
         show_rules()
@@ -29,7 +29,7 @@ def init_game():
         start_game()
     elif round_start == "n":
         print("What a pitty! Maybe you will change your mind "
-              "and come back soon to save a man from hanging.")
+              "and come back soon to save a man from being hanged.")
     else:
         print("Answer must be 'Y','N' or 'R'")
         init_game()
@@ -52,7 +52,7 @@ def ready_to_play():
         start_game()
     elif ask_to_play == "n":
         print("What a pitty! Maybe you will change your mind "
-              "and come back soon to save a man from hanging.")
+              "and come back soon to save a man\n from being hanged.")
     else:
         print(f"{ask_to_play} is not a valid answer.")
         ready_to_play()
