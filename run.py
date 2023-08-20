@@ -108,7 +108,7 @@ def start_game():
     # (https://www.youtube.com/watch?v=MtYw0RaZ4B0&ab_channel=NPStation)
     # and reworked/modified the code for additional features
     while tries > 0:
-        word_completed = ""
+        word_completed = " "
         for letter in word:
             if letter in guessed_letters:
                 word_completed += letter
