@@ -37,7 +37,7 @@ def init_game():
 def answer_no():
     print("What a pity! Maybe you will change your mind "
           "and come back soon to save a man\nfrom being hanged."
-          "(Execution of application ended. Press RUN PROGRAM to"
+          "(Execution of program ended. Press RUN PROGRAM to"
           " restart.)")
 
 
