@@ -35,6 +35,9 @@ def init_game():
 
 
 def answer_no():
+    """
+    Function that prints out farewell text, when player's answer is No
+    """
     print("What a pity! Maybe you will change your mind "
           "and come back soon to save a man\nfrom being hanged."
           "(Execution of program ended. Press RUN PROGRAM to"
