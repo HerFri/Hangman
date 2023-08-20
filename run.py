@@ -52,7 +52,7 @@ def ready_to_play():
         start_game()
     elif ask_to_play == "n":
         print("What a pitty! Maybe you will change your mind "
-              "and come back soon to save a man\n from being hanged.")
+              "and come back soon to save a man\nfrom being hanged.")
     else:
         print(f"{ask_to_play} is not a valid answer.")
         ready_to_play()
