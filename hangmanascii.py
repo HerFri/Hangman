@@ -1,5 +1,4 @@
 # Hangman ASCII art source: https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c
-
 HANG_STAGES = [
 """
   +---+
@@ -45,6 +44,7 @@ HANG_STAGES = [
       |
 ========="""]
 
+# Hangman title source: https://ascii.co.uk/art/hangman
 HANGMANTITLE = """ 
  _                                             
 | |                                                +---+    
@@ -55,6 +55,8 @@ HANGMANTITLE = """
                     __/ |                              |
                    |___/                         ========="""       
 
+
+# Generated on this website: https://patorjk.com/software/taag/#p=display&f=Big&t=You%20win%20!
 YOUWIN = """
  __     __                    _         _ 
  \ \   / /                   (_)       | |
@@ -65,6 +67,7 @@ YOUWIN = """
                                           
                                           """
 
+# Generated on this website: https://patorjk.com/software/taag/#p=display&f=Big&t=You%20lose%20!
 YOULOSE = """
  __     __           _                  _ 
  \ \   / /          | |                | |

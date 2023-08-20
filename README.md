@@ -26,15 +26,15 @@ By visiting the Heroko website that was used to deploy the application, the firs
 ![wronganswer](https://github.com/HerFri/hangman/blob/main/readmeimages/wronganswer.PNG?raw=true)
 
 # Game Rules
-![rules]
+![rules](https://github.com/HerFri/hangman/blob/main/readmeimages/rules.PNG?raw=true)
 
 By giving the input of ´R´, the rules of the game are presented to the user. At the end, the user is asked, if he or she is ready to play, which can be answered by the input of ´Y´ for Yes and ´N´ for No. Once again, if invalid input is provided, the user will be shown an error message, followed by the same question asking if the user is ready to play:
 
-![notvalidanswer]()
+![notvalidanswer](https://github.com/HerFri/hangman/blob/main/readmeimages/notvalidanswer.PNG?raw=true)
 
 By giving the input of ´N´ for No, a message is displayed that the execution of the program ends and that the application can be restarted by pressing the ´RUN PROGRAM´ button above: 
 
-![answerno]()
+![answerno](https://github.com/HerFri/hangman/blob/main/readmeimages/answerno.PNG?raw=true)
 
 By giving the input of ´Y´ for Yes, the game is started and the player can start guessing a letter.
 
@@ -42,17 +42,19 @@ By giving the input of ´Y´ for Yes, the game is started and the player can sta
 
 When the player agrees to play the game, the game starts and the program picks a random word from the wordlist provided in the code. For each letter of the word a underscore is displayed. Under the underscores, the player can see how many tries he or she has left and is asked to type in a letter for the first guess. 
 
-![startgame]()
+![startgame](https://github.com/HerFri/hangman/blob/main/readmeimages/startgame.PNG?raw=true)
 
 By providing invalid inputs and inputs that are not usual letters of the English alphabet, like numbers or 'umlauts', the player receives an error message:
 
-![error]()
+![error](https://github.com/HerFri/hangman/blob/main/readmeimages/error.PNG?raw=true)
 
 When providing valid input, the application checks if the letter is in the random chosen word or not. When the guess is correct, the player receives a positive feedback message that states that the guessed letter is in the secret word. The guessed letter will then be revealed in all positions the letter is found in the secret word and the respective underscores disappear. Moreover, from now on, all guessed letters will be displayed in alphabetical order right under the counter of the tries the player has left:
 
-![correctguess]()
+![correctguess](https://github.com/HerFri/hangman/blob/main/readmeimages/correctguess.PNG?raw=true)
 
 As long as the player has at least one try left, the application will ask the player to guess another letter. If the guessed letter is not in the word, a message that states this will be printed out and the hangman stage will be displayed, depending on how many letters the player already guessed incorrectly. In the following screenshot the player guessed a letter the first time incorrectly:
 
-![incorrectguess]()
+![incorrectguess](https://github.com/HerFri/hangman/blob/main/readmeimages/incorrectguess.PNG?raw=true)
+
+
 

@@ -1,5 +1,6 @@
 import random
 
+# Hangman wordlist source: https://www.hangmanwords.com/words
 __WORD_LIST__ = [
     "abruptly",
     "absurd",
