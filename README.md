@@ -2,7 +2,7 @@
 
 Visit the deployed application on [Heroku](https://hangman-by-herfri-1d96d392125d.herokuapp.com/)
 
-Hangman is a terminal based game where players compete against the computer by guessing the right letters of a random word chosen by the computer. Within six tries, players have to guess all letters of the word to win the game. When the game is started, for each letter of the word an underscore ( _ ) is displayed. When the player guesses a letter that is included in the word, the respective underscore is replaced by the correctly guessed letter. For every wrong letter guessed, the player loses one try and an additional bodypart of the hangman is displayed on the rope. When all six tries have been used by the player, the final stage of the hanging man is displayed and the game is lost.
+Hangman is a terminal based game where players compete against the computer by guessing the right letters of a random word chosen by the computer. Within six tries, players have to guess all letters of the word to win the game. When the game is started, for each letter of the word a underscore ( _ ) is displayed. When the player guesses a letter that is included in the word, the respective underscore is replaced by the correctly guessed letter. For every wrong letter guessed, the player loses one try and an additional bodypart of the hangman is displayed on the rope. When all six tries have been used by the player, the final stage of the hanging man is displayed and the game is lost.
 
 ## User Experience
 # User Stories
@@ -25,11 +25,34 @@ By visiting the Heroko website that was used to deploy the application, the firs
 
 ![wronganswer](https://github.com/HerFri/hangman/blob/main/readmeimages/wronganswer.PNG?raw=true)
 
-# Rules
+# Game Rules
 ![rules]
 
 By giving the input of ´R´, the rules of the game are presented to the user. At the end, the user is asked, if he or she is ready to play, which can be answered by the input of ´Y´ for Yes and ´N´ for No. Once again, if invalid input is provided, the user will be shown an error message, followed by the same question asking if the user is ready to play:
 
-![notvalidanswer]
+![notvalidanswer]()
 
-By giving the input of ´N´ for No, the 
+By giving the input of ´N´ for No, a message is displayed that the execution of the program ends and that the application can be restarted by pressing the ´RUN PROGRAM´ button above: 
+
+![answerno]()
+
+By giving the input of ´Y´ for Yes, the game is started and the player can start guessing a letter.
+
+# Playing the Game
+
+When the player agrees to play the game, the game starts and the program picks a random word from the wordlist provided in the code. For each letter of the word a underscore is displayed. Under the underscores, the player can see how many tries he or she has left and is asked to type in a letter for the first guess. 
+
+![startgame]()
+
+By providing invalid inputs and inputs that are not usual letters of the English alphabet, like numbers or 'umlauts', the player receives an error message:
+
+![error]()
+
+When providing valid input, the application checks if the letter is in the random chosen word or not. When the guess is correct, the player receives a positive feedback message that states that the guessed letter is in the secret word. The guessed letter will then be revealed in all positions the letter is found in the secret word and the respective underscores disappear. Moreover, from now on, all guessed letters will be displayed in alphabetical order right under the counter of the tries the player has left:
+
+![correctguess]()
+
+As long as the player has at least one try left, the application will ask the player to guess another letter. If the guessed letter is not in the word, a message that states this will be printed out and the hangman stage will be displayed, depending on how many letters the player already guessed incorrectly. In the following screenshot the player guessed a letter the first time incorrectly:
+
+![incorrectguess]()
+
