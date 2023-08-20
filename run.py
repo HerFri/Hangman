@@ -58,6 +58,8 @@ def play_again():
     """
     next_round = input("Want to play again? Y/N \n")
     if next_round == "y":
+        print("Let's play another round!")
+        print("\n")
         start_game()
     elif next_round == "n":
         print("What a pitty! Maybe you will change your mind and come to play soon.")
@@ -88,33 +90,34 @@ def start_game():
     """
     Function for starting the actual game, when player agrees to play a game 
     """
-    word = get_word()
-    
+    word = get_word() 
     tries = 6
-    
-    correct_guesses = []
-    incorrect_guesses = []
     guessed_letters = []
     hangman_counter = -1     
     
-
+    # for some parts of the code for the while-loop I took inspiration from this tutorial 
+    # (https://www.youtube.com/watch?v=MtYw0RaZ4B0&ab_channel=NPStation)
+    # and reworked/modified the code for additional features
     while tries > 0:
-        output = ""
+        word_completed = ""
         for letter in word:
-            if letter in correct_guesses:
-                output += letter
-            else:
-                output += " _ "
-        if output == word:
-            win_round(word) 
+                if letter in guessed_letters:
+                    word_completed += letter
+                    print(letter, end=" ")
+                else:
+                    print(" _", end=" ")
+        
+        if word_completed == word:
+            win_round(word)
+            break
+        
         print("\n")
-        print("Guess a letter of the word: ", output)
-        
-        print("Already guessed letters:", *sorted(guessed_letters), sep = " ")
-        
         print(tries, " tries left")
         
-        guess = input().lower()
+        if guessed_letters:
+            print("Already guessed letters:", *sorted(guessed_letters), sep = " ")
+        
+        guess = input("Guess a letter of the word: ").lower()        
         if not guess.isalpha():
             print(f"{guess} is not a letter!")
             continue
@@ -123,28 +126,28 @@ def start_game():
             continue
         elif len(guess) > 1:
             print("Pick only one letter!")
-            continue
-
-        if guess in correct_guesses or guess in incorrect_guesses:
+            continue    
+        
+        if guess in guessed_letters:
             print("Already guessed", guess)
+            print("\n")
         elif guess in word:
+            print("\n")
             print(f"Good job, the letter {guess} is in the word!")
-            correct_guesses.append(guess)
             guessed_letters.append(guess)
-            print(hangman[hangman_counter])
+            if hangman_counter >= 0:
+                print(hangman[hangman_counter])
+                print("\n")     
         else:
             print(f"Unfortunately, {guess} is not in the word.")
+            guessed_letters.append(guess)
             hangman_counter += 1
             tries -= 1
-            incorrect_guesses.append(guess)
-            guessed_letters.append(guess)
             print(hangman[hangman_counter])
-    if tries > 0:
-        win_round(word)
-    elif tries == 0:
-        lose_round(word)  
+            print("\n")
+    if tries == 0:
+        lose_round(word)
 
 
 if __name__ == "__main__":
     init_game()
-# DocString description needed?
