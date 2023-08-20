@@ -14,11 +14,22 @@ Hangman is a terminal based game where players compete against the computer by g
 
 # Preplanning and Structure
 For a comprehensible visualization of the application structure I made this flowchart on the [Lucidchart website](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=9044294&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQjw84anBhCtARIsAISI-xdxDXtOxQFpn7lv1WJ7UmkNvllJ2ZjPF05InfeNfMNl2-dFll3VTHEaAsT0EALw_wcB):
-![flowchart] ()
+
+![flowchart](https://github.com/HerFri/hangman/blob/main/readmeimages/flowchart.png?raw=true)
 
 ## Features
 # Terminal Landing Page
-![landingpage]
-By visiting the Heroko website that was used to deploy the application, the first thing that is displayed to the user is the terminal landing page. By entering the side, the application is initialized and waits for the input of the user. On the very top is the ´RUN PROGRAM´ button that allows to restart the application at any time. On the top of the terminal the running startup command is displayed that runs the code of the application. Under the ASCII art that displays the title  'Hangman' and a stick figure hanging on a rope, the user finds a text that greets visiting users and asks, if the game wants to be played, which can be answered by typing in ´Y´ for Yes and ´N´ for No. The input here is not case-sensitive. Moreover, if users do not know the rules of the game, the text suggests to type in ´R´ to display the rules of the game. By typing in different letters or characters other than ´Y´, ´N´ or ´Y´ , like ´F´, and pressing the enter key, a message will be displayed that points out that an invalid answer has been typed in, followed by the display of the same display of ASCII art and text like in the beginning when starting the application :
+![landingpage](https://github.com/HerFri/hangman/blob/main/readmeimages/landingpage.PNG?raw=true)
 
-![wronganswer]()
+By visiting the Heroko website that was used to deploy the application, the first thing that is displayed to the user is the terminal landing page. By entering the side, the application is initialized and waits for the input of the user. On the very top is the ´RUN PROGRAM´ button that allows to restart the application at any time. On the top of the terminal the running startup command is displayed that runs the code of the application. Under the ASCII art that displays the title  'Hangman' and a stick figure hanging on a rope, the user finds a text that greets visiting users and asks, if the game wants to be played, which can be answered by typing in ´Y´ for Yes and ´N´ for No. The input here is not case-sensitive. Moreover, if users do not know the rules of the game, the text suggests to type in ´R´ to display the rules of the game. By typing in different letters or characters other than ´Y´, ´N´ or ´Y´ , like ´F´, and pressing the enter key, a message will be displayed that points out that an invalid answer has been typed in, followed by the display of the same display of ASCII art and text like in the beginning when starting the application, which gives once again opportunity to the user to provide a valid input:
+
+![wronganswer](https://github.com/HerFri/hangman/blob/main/readmeimages/wronganswer.PNG?raw=true)
+
+# Rules
+![rules]
+
+By giving the input of ´R´, the rules of the game are presented to the user. At the end, the user is asked, if he or she is ready to play, which can be answered by the input of ´Y´ for Yes and ´N´ for No. Once again, if invalid input is provided, the user will be shown an error message, followed by the same question asking if the user is ready to play:
+
+![notvalidanswer]
+
+By giving the input of ´N´ for No, the 
