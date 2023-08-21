@@ -59,6 +59,7 @@ As long as the player has at least one try left, the application will ask the pl
 
 When the player used all tries and there are still letters to be guessed, the game is lost and the hanging man is displayed. A ASCII art display of 'You lost!' is displayed, followed by a text, stating that the game is lost and revealing the secret word. Moreover, the player is asked, if she or he wants to play again, which can be answered by the input of `Y` for Yes and `N` for No. Just like in the instances before, by providing an invalid input that is not `Y` or `N`, the player receives an error message that the provided input is not a valid answer. By answering `Y`, a new round of the game is started. By answering `N`, a message is displayed that the execution of the program ends and that the application can be restarted by pressing the `RUN PROGRAM` button above. In the following screenshots the player won the game and decided to play another round of Hangman. The message 'Let's play another round!' informs the player that a new round has been started. Note how when winning the game not all body parts in the hangman display are shown and the ASCII art display differs from when losing the game:
 
+![playerloses](https://github.com/HerFri/hangman/blob/main/readmeimages/youlose.PNG?raw=true)
 ![playerwins](https://github.com/HerFri/hangman/blob/main/readmeimages/playerwins.PNG?raw=true)
 ![startnewround](https://github.com/HerFri/hangman/blob/main/readmeimages/startnewround.PNG?raw=true)
 
