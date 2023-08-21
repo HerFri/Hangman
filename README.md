@@ -6,11 +6,12 @@ Hangman is a terminal based game where players compete against the computer by g
 
 # User Experience
 ## User Stories
-* As a new player who never played the game before, I want to learn the rules of the game by reading easily understandable instructions.
+* As a new player who never played the game before, I want to learn the rules of the game by reading easily understandable instructions
 * As a player, I want to find understandable instructions, providing information on how to start the game or read the rules
 * As a player, I want to find interactive elements, like buttons, that allow me to restart the application whenever I feel like it
 * As a player, I want to be informed what input is needed to play the game correctly
-* As a player, I want to receive a notification when my input is not valid
+* As a player, I want to be informed when my input is not valid
+* As a player, I want to enjoy a fun little game
 
 # Preplanning and Structure
 For a comprehensible visualization of the application structure I made this flowchart on the [Lucidchart website](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=9044294&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQjw84anBhCtARIsAISI-xdxDXtOxQFpn7lv1WJ7UmkNvllJ2ZjPF05InfeNfMNl2-dFll3VTHEaAsT0EALw_wcB):
@@ -58,16 +59,26 @@ As long as the player has at least one try left, the application will ask the pl
 
 When the player used all tries and there are still letters to be guessed, the game is lost and the hanging man is displayed. A ASCII art display of 'You lost!' is displayed, followed by a text, stating that the game is lost and revealing the secret word. Moreover, the player is asked, if she or he wants to play again, which can be answered by the input of `Y` for Yes and `N` for No. Just like in the instances before, by providing an invalid input that is not `Y` or `N`, the player receives an error message that the provided input is not a valid answer. By answering `Y`, a new round of the game is started. By answering `N`, a message is displayed that the execution of the program ends and that the application can be restarted by pressing the `RUN PROGRAM` button above. In the following screenshots the player won the game and decided to play another round of Hangman. The message 'Let's play another round!' informs the player that a new round has been started. Note how when winning the game not all body parts in the hangman display are shown and the ASCII art display differs from when losing the game:
 
-![playerwins]()
-![startnextround()]
+![playerwins](https://github.com/HerFri/hangman/blob/main/readmeimages/playerwins.PNG?raw=true)
+![startnewround(https://github.com/HerFri/hangman/blob/main/readmeimages/startnewround.PNG?raw=true)]
 
 # Testing
 # Code Institute Python Linter Testing
 After breaking the lines for some print statements and comments that had more than 80 characters in one line, the linter showed no more errors:
 
-![linterresults]()
+![linterresults](https://github.com/HerFri/hangman/blob/main/readmeimages/linterresults.PNG?raw=true)
 
 ## Manual Testing
+| As a new player who never played the game before, I want to learn the rules of the game by reading easily understandable instructions | As a new player, I can read the rules at the beginning of the game. The rules are written in a very easily understandable manner.                                                      |
+|----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| As a player, I want to find understandable instructions, providing information on how to start the game or read the rules              | As a player, the terminal based application is always providing sufficient instructions what inputs are needed to execute certain actions, like starting the game or reading the rules |
+| As a player, I want to find interactive elements, like buttons, that allow me to restart the application whenever I feel like it       | As a player, I can find the button 'RUN PROGRAM' to restart the application whenever I feel like it                                                                                    
+| As a player, I want to be informed what input is needed to play the game correctly                                                     | The application is always providing sufficient instructions what inputs are needed to play the game correctly and informs when an input is not correct
+| As a player, I want to be informed when my input is not valid. | The application is always informing the player when an invalid input has been provided 
+|----------------------------------------------------------------|----------------------------------------------------------------------------------------
+| As a player, I want to enjoy a fun little game                 | As a player, I can enjoy a fun little game                                             
+|                                                                |                                                                                        
+|                                                                |                                                                                             
 
 ## Testing User Stories
 
@@ -75,7 +86,7 @@ After breaking the lines for some print statements and comments that had more th
 ## Resolved Bugs
 Before deploying the final application, users were able to give inputs of characters longer than one character and other invalid inputs like numbers and 'umlauts'. I fixed this issue by adding if conditions including error messages in the code that, that will not allow and inform the user about the invalid input:
 
-![ifconditions]()
+![ifconditions](https://github.com/HerFri/hangman/blob/main/readmeimages/ifconditions.PNG?raw=true)
 
 
 ## Unresolved Bugs
