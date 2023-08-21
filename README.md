@@ -120,5 +120,5 @@ Following steps were undertaken to deploy the application on Heroku:
 * 'You lose' ASCII art generated on [this website](https://patorjk.com/software/taag/#p=display&f=Big&t=You%20lose%20!)
 * Hangman wordlist [source](https://www.hangmanwords.com/words)
 
-# Acknowledegments
+# Acknowledgements
 I want to thank my mentor and Slack Community of Code Institute for their helpful advice and feedback during the work on this project!
