@@ -121,4 +121,4 @@ Following steps were undertaken to deploy the application on Heroku:
 * Hangman wordlist [source](https://www.hangmanwords.com/words)
 
 # Acknowledgements
-I want to thank my mentor and Slack Community of Code Institute for their helpful advice and feedback during the work on this project!
+I want to thank my mentor and the Slack Community of Code Institute for their helpful advice and feedback during the work on this project!
