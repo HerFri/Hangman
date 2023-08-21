@@ -49,7 +49,7 @@ By providing invalid inputs and inputs that are not usual letters of the English
 
 ![error](https://github.com/HerFri/hangman/blob/main/readmeimages/error.PNG?raw=true)
 
-When providing valid input, the application checks if the letter is in the random chosen word or not. When the guess is correct, the player receives a positive feedback message that states that the guessed letter is in the secret word. The guessed letter will then be revealed in all positions the letter is found in the secret word and the respective underscores disappear. Moreover, from now on, all guessed letters will be displayed in alphabetical order right under the counter of the tries the player has left:
+When providing valid input, the application checks if the letter is in the secret word or not. When the guess is correct, the player receives a positive feedback message that states that the guessed letter is in the secret word. The guessed letter will then be revealed in all positions the letter is found in the secret word and the respective underscores disappear. Moreover, from now on, all guessed letters will be displayed in alphabetical order right under the counter of the tries the player has left:
 
 ![correctguess](https://github.com/HerFri/hangman/blob/main/readmeimages/correctguess.PNG?raw=true)
 
