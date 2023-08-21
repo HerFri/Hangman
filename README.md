@@ -82,8 +82,7 @@ After breaking the lines for some print statements and comments that had more th
 | As a player, I want to find interactive elements, like buttons, that allow me to restart the application whenever I feel like it       | As a player, I can find the button 'RUN PROGRAM' to restart the application whenever I feel like it                                                                                    
 | As a player, I want to be informed what input is needed to play the game correctly                                                     | The application is always providing sufficient instructions what inputs are needed to play the game correctly and informs when an input is not correct
 | As a player, I want to be informed when my input is not valid. | The application is always informing the player when an invalid input has been provided 
-| As a player, I want to enjoy a fun little game                 | As a player, I can enjoy a fun little game                                             
-|                                                                                             
+| As a player, I want to enjoy a fun little game                 | As a player, I can enjoy a fun little game                                                                                                                                          
 # Bugs
 ## Resolved Bugs
 Before deploying the final application, users were able to give inputs of characters longer than one character and other invalid inputs like numbers and 'umlauts'. I fixed this issue by adding if conditions including error messages in the code that, that will not allow and inform the user about the invalid input:
