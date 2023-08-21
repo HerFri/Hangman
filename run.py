@@ -110,7 +110,7 @@ def start_game():
     guessed_letters = []
     hangman_counter = -1
 
-    # for some parts of the code for the while-loop I took inspiration from
+    # I took inspiration and some code for the while-loop from
     # this tutorial
     # (https://www.youtube.com/watch?v=MtYw0RaZ4B0&ab_channel=NPStation)
     # and reworked/modified the code for additional features
@@ -121,6 +121,8 @@ def start_game():
                 word_completed += letter
                 print(letter, end=" ")
             else:
+                # end parameter code taken from
+                # #https://www.geeksforgeeks.org/gfact-50-python-end-parameter-in-print/
                 print("_", end=" ")
 
         if word_completed == word:
@@ -131,6 +133,10 @@ def start_game():
         print(tries, " tries left")
 
         if guessed_letters:
+            # sorted function code taken from
+            # #https://www.w3schools.com/python/ref_func_sorted.asp
+            # Print list without brackets code taken from
+            # https://sparkbyexamples.com/python/python-print-list-without-brackets/
             print("Already guessed letters:",
                   *sorted(guessed_letters), sep=" ")
 
